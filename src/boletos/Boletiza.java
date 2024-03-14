@@ -88,6 +88,7 @@ public class Boletiza extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Boleto");
 
+        txtDes.setEditable(false);
         txtDes.setColumns(20);
         txtDes.setRows(5);
         jScrollPane1.setViewportView(txtDes);
@@ -126,7 +127,7 @@ public class Boletiza extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
-                        .addComponent(btnCalcular)))
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
@@ -215,8 +216,8 @@ public class Boletiza extends javax.swing.JFrame {
         {
             ope = cantidad * Hombres;
 
-            jPanel1.setBackground(Color.blue);
-            jPanel2.setBackground(Color.blue);
+            jPanel1.setBackground(Color.cyan);
+            jPanel2.setBackground(Color.cyan);
           
         } else if (lbMujeres.isSelected())
         {
@@ -226,7 +227,7 @@ public class Boletiza extends javax.swing.JFrame {
             
         }
         txtTotal.setText(String.valueOf(ope));
-        txtDes.setText(String.valueOf("                                        Boletos"+"\n "+"-Cantidad de boletos comprados es: " + cantidad + "\n" + "-Total a pagar es : " + ope));
+        txtDes.setText(String.valueOf("                                  Boletos"+"\n "+"-Cantidad de boletos comprados es: " + cantidad + "\n" + "-Total a pagar es : " + ope));
 
 
     }//GEN-LAST:event_btnCalcularActionPerformed
@@ -237,6 +238,8 @@ public class Boletiza extends javax.swing.JFrame {
         txtDes.setText("");
         
         Genero.clearSelection();
+        
+   jPanel2.setBackground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     /**
